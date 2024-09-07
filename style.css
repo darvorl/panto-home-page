@@ -1,0 +1,66 @@
+:root {
+  --clr--accent--400: #E58411;
+  --clr--accent--200: #F6B76F;
+  --clr--primary--400: #0D1B39;
+  --clr--text--400: #1E1E1E;
+  --clr--text--200: #8D8D8D;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: var(--clr--text--400);
+}
+
+/* CSS RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* UTILITY CLASSES */
+.tx-xl {
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+}
+
+.tx-l {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.tx-xm {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.tx-m {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.tx-xs {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.tx-s {
+  font-size: 14px;
+  font-weight: 600;
+  color: #E58411;
+}
