@@ -1,10 +1,9 @@
 :root {
-  --clr--accent--400: #E58411;
-  --clr--accent--200: #F6B76F;
-  --clr--primary--400: #0D1B39;
-  --clr--text--400: #1E1E1E;
-  --clr--text--200: #8D8D8D;
-  font-family: "DM Sans", sans-serif;
+  --clr--accent--400: #e58411;
+  --clr--accent--200: #f6b76f;
+  --clr--primary--400: #0d1b39;
+  --clr--text--400: #1e1e1e;
+  --clr--text--200: #8d8d8d;
   font-size: 16px;
   color: var(--clr--text--400);
 }
@@ -14,9 +13,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -31,7 +32,16 @@ ul {
   list-style: none;
 }
 
+i {
+  cursor: pointer;
+}
+
 /* UTILITY CLASSES */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .tx-xl {
   font-size: 80px;
   font-weight: 700;
@@ -45,22 +55,116 @@ ul {
 
 .tx-xm {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 300;
   color: white;
 }
 
 .tx-m {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .tx-xs {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .tx-s {
   font-size: 14px;
+  font-weight: 300;
+  color: #e58411;
+}
+
+.logo {
+  font-size: 28px;
   font-weight: 600;
-  color: #E58411;
+  color: white;
+}
+
+.icon__badge {
+  background-color: var(--clr--accent--400);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+}
+
+/* HERO */
+.hero {
+  background-image: url(./assets/hero-image.png);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 600px;
+}
+
+.hero__nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.hero__links {
+  display: flex;
+  gap: 64px;
+}
+
+.hero__links a {
+  font-weight: 400;
+}
+
+.hero__cart {
+  font-size: 44px;
+  position: relative;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.hero__content p {
+  width: 44%;
+}
+
+.hero__content__search {
+  padding: 8px 8px 8px 20px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero__content__search input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: white;
+}
+
+.hero__content__search__icon {
+  padding: 12px;
+  background-color: var(--clr--accent--400);
+  color: white;
+  border-radius: 24px;
+  font-size: 24px;
+  font-weight: bold;
 }
