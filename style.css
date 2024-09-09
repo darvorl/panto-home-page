@@ -40,6 +40,7 @@ i {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .tx-xl {
@@ -167,4 +168,45 @@ i {
   border-radius: 24px;
   font-size: 24px;
   font-weight: bold;
+}
+
+/* WHY CHOOSE US */
+.why-choose-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 20px;
+}
+
+.why-choose-us h2 {
+  width: 22%;
+}
+
+.why-choose-us h3 {
+  color: var(--clr--text--400);
+  font-weight: bold;
+}
+
+.why-choose-us p {
+  font-weight: 300;
+}
+
+.why-choose-us__columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 75%;;
+}
+
+.why-choose-us__column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.why-choose-us__column__link {
+  color: var(--clr--accent--400);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
