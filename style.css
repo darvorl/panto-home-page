@@ -376,6 +376,7 @@ i {
   background-color: var(--clr--text--100);
   padding: 40px;
   border-radius: 20px;
+  flex: 0.7;
 }
 
 /* MATERIALS */
@@ -384,6 +385,7 @@ i {
   display: flex;
   gap: 60px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .materials__visual {
@@ -413,6 +415,8 @@ i {
   background-color: var(--clr--text--100);
   padding: 40px;
   border-radius: 20px;
+  flex: 0.7;
+  margin-left: auto;
 }
 
 /* TESTIMONIALS */
