@@ -15,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  transition: 0.2s;
 }
 
 img,
@@ -737,6 +738,43 @@ i {
   }
 }
 
-@media (max-width: 725px) {
+/* DYNAMIC */
+.hero__links li a:hover {
+  transform: scale(1.1);
+}
 
+.hero__cart:hover {
+  transform: scale(1.1);  
+}
+
+.hero__content__search__icon:hover {
+  box-shadow: 0 0 20px var(--clr--accent--400);
+}
+
+.arrow-icon:hover {
+  gap: 20px;
+}
+
+#btn-prev:hover {
+  box-shadow: 0 0 20px var(--clr--text--200);
+}
+
+#btn-next:hover {
+  box-shadow: 0 0 20px var(--clr--text--200);
+}
+
+.plus-icon:hover {
+  transform: scale(1.2);
+}
+
+.footer__header a:hover {
+  text-decoration: underline;
+}
+
+.footer__header__links__column--icons a:hover {
+  text-decoration: none;
+}
+
+.footer__footer a:hover {
+  text-decoration: underline;
 }
