@@ -45,29 +45,29 @@ i {
 }
 
 .tx-xl {
-  font-size: 80px;
+  font-size: clamp(40px, calc(24px + 3.75vw), 80px);
   font-weight: 700;
   color: white;
 }
 
 .tx-l {
-  font-size: 42px;
+  font-size: clamp(21px, calc(15px + 2vw), 42px);
   font-weight: 700;
 }
 
 .tx-xm {
-  font-size: 24px;
+  font-size: clamp(12px, calc(8.57px + 1vw), 24px);
   font-weight: 300;
   color: white;
 }
 
 .tx-m {
-  font-size: 22px;
+  font-size: clamp(11px, calc(7.86px + 1vw), 22px);
   font-weight: 300;
 }
 
 .tx-xs {
-  font-size: 18px;
+  font-size: clamp(14px, calc(6.43px + 1vw), 18px);
   font-weight: 300;
 }
 
@@ -98,6 +98,14 @@ i {
 }
 
 /* HERO */
+#sidebar-active{
+  display: none;
+}
+
+.open-sidebar-btn, .close-sidebar-btn, #overlay {
+  display: none;
+}
+
 .hero {
   background-image: url(./assets/hero-image.png);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%);
@@ -652,13 +660,50 @@ i {
 }
 
 @media (max-width: 900px) {
+  .why-choose-us__columns {
+    width: 100%;
+  }
+
+  .why-choose-us__columns {
+    justify-items: center;
+  }
+
+  .hero__content p {
+    width: 100%;
+  }
+  
+  .open-sidebar-btn {
+    display: block;
+  }
+
+  .hero__links, .hero__cart {
+    display: none;
+  }
+
+  .hero__nav i{
+    font-size: 32px;
+  }
+
+  #sidebar-active:checked ~ .hero__links {
+    right: 0;
+  } 
+
+  #sidebar-active:checked ~ #overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
   .footer__header {
     flex-direction: column;
     text-align: center;
   }
 
   .footer__header__content {
-    width: 60%;
+    width: 100%;
   }
 
   .footer__header__links {
@@ -675,4 +720,23 @@ i {
   .footer__header__links__column ul {
     align-items: flex-start;
   }
+
+  .footer__footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .testimonials__cards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .footer__header__links div {
+    width: 125px;
+  }
+}
+
+@media (max-width: 725px) {
+
 }
