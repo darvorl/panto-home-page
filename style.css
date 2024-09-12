@@ -525,6 +525,7 @@ i {
 .footer__header {
   display: flex;
   gap: 80px;
+  align-items: center;
 }
 
 .footer__header__content {
@@ -545,7 +546,8 @@ i {
 .footer__header__links {
   flex: 0.7;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
 }
 
 .footer__header__links__column {
@@ -591,4 +593,86 @@ i {
 
 .footer__footer ul li a {
   color: var(--clr--text--400);
+}
+
+@media (max-width: 1200px) {
+  /* WHY CHOOSE US */
+  .why-choose-us {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .why-choose-us h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* EXPERIENCES */
+  .experiences {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .experiences__visual img {
+    border-radius: 20px;
+  }
+
+  .experiences__content{
+    text-align: center;
+    width: 80%;
+  }
+
+  .experiences__content a {
+    justify-content: center;
+  }
+
+  /* MATERIALS */
+  .materials {
+    gap: 40px;
+    flex-direction: column-reverse;
+  }
+  
+  .materials__content {
+    width: 80%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .materials__content a {
+    justify-content: center;
+  }
+
+  .materials__visual img:nth-child(1) {
+    display: none;
+  }
+
+  .materials__visual {
+    grid-template-columns: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__header__content {
+    width: 60%;
+  }
+
+  .footer__header__links {
+    width: 100%;
+    justify-items: center;
+  }
+
+  .footer__header__links__column {
+    justify-content: center;
+    align-items: flex-start;
+    width: fit-content;
+  }
+
+  .footer__header__links__column ul {
+    align-items: flex-start;
+  }
 }
